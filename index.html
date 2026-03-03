@@ -1,10 +1,311 @@
 <!DOCTYPE html>
-<html>
+<html lang="es-MX">
 <head>
-    <title>Mi primera página</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Porta Fácil México → Cambia de compañía sin perder tu número</title>
+  <meta name="description" content="Portabilidad gratis Telcel → AT&T → Movistar → Unefon → Megacable → Bait → Weex y más. Conserva tu número y gana mejores promociones 2026."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #1d2939;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header/Hero */
+    header {
+      background: linear-gradient(135deg, #006aff 0%, #0040c1 100%);
+      color: white;
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+    .tel {
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #006aff 0%, #003087 100%);
+      color: white;
+      text-align: center;
+      padding: 5rem 20px 4rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 6vw, 3.8rem);
+      margin-bottom: 1.2rem;
+      line-height: 1.15;
+    }
+    .hero h1 span {
+      color: #ffd426;
+    }
+    .hero p {
+      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+      max-width: 780px;
+      margin: 0 auto 2.2rem;
+      opacity: 0.95;
+    }
+    .btn {
+      display: inline-block;
+      background: #ffd426;
+      color: #1d2939;
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 1rem 2.3rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 30px rgba(255,212,36,0.35);
+      transition: all 0.28s;
+      margin: 0.5rem;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(255,212,36,0.5);
+      background: #ffea5c;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* Ventajas */
+    .ventajas {
+      padding: 5rem 0;
+      background: white;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+      color: #003087;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2.2rem 1.8rem;
+      text-align: center;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    .card .emoji {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+      color: #003087;
+    }
+
+    /* Operadores */
+    .operadores {
+      background: #f0f4ff;
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem 3.5rem;
+      margin-top: 2.5rem;
+    }
+    .logos img {
+      height: 55px;
+      width: auto;
+      filter: grayscale(1) brightness(0.9);
+      transition: all 0.3s;
+    }
+    .logos img:hover {
+      filter: grayscale(0) brightness(1.05);
+      transform: scale(1.12);
+    }
+
+    /* Formulario */
+    .form-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #003087, #006aff);
+      color: white;
+      text-align: center;
+    }
+    .form-container {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .form-container input, .form-container select {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.8rem 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+    }
+    .form-container button {
+      margin-top: 1.5rem;
+      font-size: 1.3rem;
+      padding: 1.1rem 3rem;
+    }
+
+    footer {
+      background: #1d2939;
+      color: #a0b0c0;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 4rem 15px 3rem; }
+      .btn { font-size: 1.1rem; padding: 0.9rem 2rem; }
+    }
+  </style>
 </head>
 <body>
-    <h1>¡Hola mundo!</h1>
-    <p>Estoy aprendiendo a crear páginas web 🚀</p>
+
+<header>
+  <div class="container">
+    <div class="top-bar">
+      <div class="logo">Porta Fácil México</div>
+      <div class="tel">☎ WhatsApp: 55 1234 5678</div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>¡Cambia de compañía <span>sin perder tu número!</span></h1>
+    <p>Portabilidad 100% gratis • Mejor plan • Más gigas • Menos precio • En 24-72 horas tu línea ya está en la nueva compañía</p>
+    
+    <a href="https://wa.me/525512345678?text=Hola%20quiero%20portar%20mi%20número" class="btn" target="_blank">Portar por WhatsApp →</a>
+    <a href="#formulario" class="btn btn-outline">Quiero cotizar mi línea</a>
+  </div>
+</section>
+
+<section class="ventajas">
+  <div class="container">
+    <h2>¿Por qué miles portan cada mes con nosotros?</h2>
+    
+    <div class="grid-3">
+      <div class="card">
+        <span class="emoji">0₱</span>
+        <h3>Completamente GRATIS</h3>
+        <p>Ni un peso por el trámite de portabilidad</p>
+      </div>
+      <div class="card">
+        <span class="emoji">⚡</span>
+        <h3>Muy rápido</h3>
+        <p>Telcel, AT&T y Movistar → 24-48 h<br>Otras → máximo 72 horas</p>
+      </div>
+      <div class="card">
+        <span class="emoji">🎁</span>
+        <h3>Promociones exclusivas</h3>
+        <p>Paquetes que no aparecen en las páginas oficiales</p>
+      </div>
+      <div class="card">
+        <span class="emoji">🛡️</span>
+        <h3>100% seguro</h3>
+        <p>Nunca pedimos NIP ni contraseñas</p>
+      </div>
+      <div class="card">
+        <span class="emoji">📱</span>
+        <h3>Todas las compañías</h3>
+        <p>Telcel • AT&T • Movistar • Unefon • Megacable • Bait • Weex • FreedomPop y más</p>
+      </div>
+      <div class="card">
+        <span class="emoji">💬</span>
+        <h3>Asesoría por WhatsApp</h3>
+        <p>Respuesta en minutos — 9:00 a 21:00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="operadores">
+  <div class="container">
+    <h2>Compañías a las que puedes portar</h2>
+    <div class="logos">
+      <!-- Puedes reemplazar con imágenes reales -->
+      <img src="https://via.placeholder.com/140x55/000/fff?text=Telcel" alt="Telcel">
+      <img src="https://via.placeholder.com/140x55/000/fff?text=AT&T" alt="AT&T">
+      <img src="https://via.placeholder.com/140x55/000/fff?text=Movistar" alt="Movistar">
+      <img src="https://via.placeholder.com/140x55/000/fff?text=Unefon" alt="Unefon">
+      <img src="https://via.placeholder.com/140x55/000/fff?text=Megacable" alt="Megacable">
+      <img src="https://via.placeholder.com/140x55/000/fff?text=Bait" alt="Bait">
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="formulario">
+  <div class="container">
+    <h2>¿Quieres saber cuánto puedes ahorrar?</h2>
+    <p style="font-size:1.3rem; margin:0 0 2.5rem; opacity:0.95;">
+      Déjanos tus datos y en minutos te enviamos las mejores opciones para tu número
+    </p>
+    
+    <div class="form-container">
+      <form action="https://formsubmit.co/tuemail@dominio.com" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="tel" name="telefono" placeholder="Número que quieres portar (10 dígitos)" pattern="[0-9]{10}" required>
+        <input type="text" name="compania_actual" placeholder="Compañía actual (Telcel, AT&T, Movistar, etc)">
+        <select name="gigabytes_deseados" required>
+          <option value="" disabled selected>¿Cuántos GB necesitas al mes?</option>
+          <option value="15-30">15–30 GB</option>
+          <option value="30-60">30–60 GB</option>
+          <option value="60-100">60–100 GB o ilimitados</option>
+          <option value="solo_llamadas">Solo llamadas y mensajes</option>
+        </select>
+        <button type="submit" class="btn">Quiero mi cotización GRATIS →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Porta Fácil México © 2026 • Portabilidad autorizada por el IFT • No somos una compañía telefónica oficial, somos asesores independientes especializados en portabilidad.</p>
+</footer>
+
 </body>
 </html>
