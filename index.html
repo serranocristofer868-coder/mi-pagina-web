@@ -3,203 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Porta Fácil México → Cambia de compañía sin perder tu número</title>
-  <meta name="description" content="Portabilidad gratis Telcel → AT&T → Movistar → Unefon → Megacable → Bait → Weex y más. Conserva tu número y gana mejores promociones 2026."/>
+  <title>Verificación de Beneficios de Telcel → Cambia sin perder tu número</title>
+  <meta name="description" content="Portabilidad gratis a Telcel. $100 cada 45 días por 12 meses + llamadas ilimitadas + 20 redes sociales ilimitadas + 20 GB extra + Tablet Samsung Galaxy Tab A GRATIS."/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f7fa;
-      color: #1d2939;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins',sans-serif; background:#f5f7fa; color:#1d2939; line-height:1.6; }
+    .container { max-width:1180px; margin:0 auto; padding:0 20px; }
 
-    /* Header/Hero */
     header {
-      background: linear-gradient(135deg, #006aff 0%, #0040c1 100%);
-      color: white;
-      padding: 1.5rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      background:linear-gradient(135deg,#006aff 0%,#0040c1 100%);
+      color:white; padding:1.2rem 0; position:sticky; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.15);
     }
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-    .logo {
-      font-size: 1.7rem;
-      font-weight: 700;
-    }
-    .tel {
-      font-size: 1.35rem;
-      font-weight: 600;
-    }
+    .top-bar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; }
+    .logo img { height:50px; width:auto; }
+    .tel { font-size:1.35rem; font-weight:600; }
 
     .hero {
-      background: linear-gradient(to bottom, #006aff 0%, #003087 100%);
-      color: white;
-      text-align: center;
-      padding: 5rem 20px 4rem;
+      background:linear-gradient(to bottom,#006aff 0%,#003087 100%);
+      color:white; text-align:center; padding:5rem 20px 3rem;
     }
-    .hero h1 {
-      font-size: clamp(2.1rem, 6vw, 3.8rem);
-      margin-bottom: 1.2rem;
-      line-height: 1.15;
+    .hero h1 { font-size:clamp(2.1rem,6vw,3.8rem); margin-bottom:1.2rem; line-height:1.15; }
+    .hero h1 span { color:#ffd426; }
+    .hero p { font-size:clamp(1.15rem,3.5vw,1.45rem); max-width:780px; margin:0 auto 2.2rem; opacity:0.95; }
+
+    .promo-destacada {
+      background:linear-gradient(135deg,#ffd426 0%,#ffea5c 100%);
+      color:#1d2939; text-align:center; padding:4rem 20px; margin: -2rem 0 3rem;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15); border-radius:0 0 30px 30px;
     }
-    .hero h1 span {
-      color: #ffd426;
+    .promo-destacada h2 { font-size:clamp(2rem,5vw,3.5rem); margin-bottom:1rem; }
+    .promo-destacada .precio { font-size:clamp(4rem,9vw,6rem); font-weight:700; color:#006aff; margin:0.3rem 0; line-height:1; }
+    .promo-destacada .detalles { font-size:1.4rem; max-width:900px; margin:1rem auto; line-height:1.4; }
+    .promo-destacada .extra { font-size:1.8rem; font-weight:700; color:#d00000; margin:1.5rem 0 1rem; }
+    .promo-destacada img.tablet { 
+      max-width:320px; width:90%; margin:1.5rem auto; display:block; 
+      border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.25); 
     }
-    .hero p {
-      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
-      max-width: 780px;
-      margin: 0 auto 2.2rem;
-      opacity: 0.95;
+    .promo-destacada .btn-promo {
+      display:inline-block; background:#006aff; color:white; font-size:1.4rem; font-weight:700;
+      padding:1.2rem 3rem; border-radius:50px; text-decoration:none; margin-top:1rem;
+      box-shadow:0 8px 25px rgba(0,106,255,0.4); transition:all 0.3s;
     }
+    .promo-destacada .btn-promo:hover { transform:translateY(-4px); box-shadow:0 12px 35px rgba(0,106,255,0.5); background:#004dd9; }
+
     .btn {
-      display: inline-block;
-      background: #ffd426;
-      color: #1d2939;
-      font-size: 1.25rem;
-      font-weight: 700;
-      padding: 1rem 2.3rem;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 8px 30px rgba(255,212,36,0.35);
-      transition: all 0.28s;
-      margin: 0.5rem;
+      display:inline-block; background:#ffd426; color:#1d2939; font-size:1.25rem; font-weight:700;
+      padding:1rem 2.3rem; border-radius:50px; text-decoration:none;
+      box-shadow:0 8px 30px rgba(255,212,36,0.35); transition:all 0.28s; margin:0.5rem;
     }
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(255,212,36,0.5);
-      background: #ffea5c;
-    }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-    }
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.15);
-    }
+    .btn:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(255,212,36,0.5); background:#ffea5c; }
+    .btn-outline { background:transparent; border:2px solid white; color:white; }
+    .btn-outline:hover { background:rgba(255,255,255,0.15); }
 
-    /* Ventajas */
-    .ventajas {
-      padding: 5rem 0;
-      background: white;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2.4rem;
-      margin-bottom: 3rem;
-      color: #003087;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 2.2rem 1.8rem;
-      text-align: center;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-    }
-    .card .emoji {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-    .card h3 {
-      font-size: 1.45rem;
-      margin-bottom: 1rem;
-      color: #003087;
-    }
+    .ventajas { padding:5rem 0; background:white; }
+    h2 { text-align:center; font-size:2.4rem; margin-bottom:3rem; color:#003087; }
+    .grid-3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; }
+    .card { background:#ffffff; border-radius:16px; padding:2.2rem 1.8rem; text-align:center; box-shadow:0 6px 25px rgba(0,0,0,0.08); transition:transform 0.25s,box-shadow 0.25s; }
+    .card:hover { transform:translateY(-10px); box-shadow:0 15px 40px rgba(0,0,0,0.12); }
+    .card .emoji { font-size:3.5rem; margin-bottom:1rem; display:block; }
+    .card h3 { font-size:1.45rem; margin-bottom:1rem; color:#003087; }
 
-    /* Operadores */
-    .operadores {
-      background: #f0f4ff;
-      padding: 5rem 0;
-      text-align: center;
-    }
-    .logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2.5rem 3.5rem;
-      margin-top: 2.5rem;
-    }
-    .logos img {
-      height: 55px;
-      width: auto;
-      filter: grayscale(1) brightness(0.9);
-      transition: all 0.3s;
-    }
-    .logos img:hover {
-      filter: grayscale(0) brightness(1.05);
-      transform: scale(1.12);
-    }
+    .operadores { background:#f0f4ff; padding:5rem 0; text-align:center; }
+    .logos { display:flex; flex-wrap:wrap; justify-content:center; gap:2.5rem 3.5rem; margin-top:2.5rem; }
+    .logos img { height:55px; width:auto; filter:grayscale(1) brightness(0.9); transition:all 0.3s; }
+    .logos img:hover { filter:grayscale(0) brightness(1.05); transform:scale(1.12); }
 
-    /* Formulario */
-    .form-section {
-      padding: 5rem 0;
-      background: linear-gradient(135deg, #003087, #006aff);
-      color: white;
-      text-align: center;
-    }
-    .form-container {
-      max-width: 620px;
-      margin: 0 auto;
-    }
-    .form-container input, .form-container select {
-      width: 100%;
-      padding: 1rem;
-      margin: 0.8rem 0;
-      border: none;
-      border-radius: 12px;
-      font-size: 1.1rem;
-    }
-    .form-container button {
-      margin-top: 1.5rem;
-      font-size: 1.3rem;
-      padding: 1.1rem 3rem;
-    }
+    .form-section { padding:5rem 0; background:linear-gradient(135deg,#003087,#006aff); color:white; text-align:center; }
+    .form-container { max-width:620px; margin:0 auto; }
+    .form-container input, .form-container select { width:100%; padding:1rem; margin:0.8rem 0; border:none; border-radius:12px; font-size:1.1rem; }
+    .form-container button { margin-top:1.5rem; font-size:1.3rem; padding:1.1rem 3rem; }
 
-    footer {
-      background: #1d2939;
-      color: #a0b0c0;
-      text-align: center;
-      padding: 2.5rem 1rem;
-      font-size: 0.95rem;
-    }
+    footer { background:#1d2939; color:#a0b0c0; text-align:center; padding:2.5rem 1rem; font-size:0.95rem; }
 
-    @media (max-width: 640px) {
-      .hero { padding: 4rem 15px 3rem; }
-      .btn { font-size: 1.1rem; padding: 0.9rem 2rem; }
+    @media (max-width:640px) {
+      .hero { padding:4rem 15px 3rem; }
+      .promo-destacada { padding:3rem 15px; }
+      .promo-destacada img.tablet { max-width:280px; }
     }
   </style>
 </head>
@@ -208,56 +92,77 @@
 <header>
   <div class="container">
     <div class="top-bar">
-      <div class="logo">Porta Fácil México</div>
-      <div class="tel">☎ WhatsApp: 55 1234 5678</div>
+      <div class="logo">
+        <img src="https://1000logos.net/wp-content/uploads/2022/11/Telcel-Logo.jpg" alt="Telcel Logo">
+      </div>
+      <div class="tel">☎ WhatsApp: 55 3484 4778</div>
     </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <h1>¡Cambia de compañía <span>sin perder tu número!</span></h1>
-    <p>Portabilidad 100% gratis • Mejor plan • Más gigas • Menos precio • En 24-72 horas tu línea ya está en la nueva compañía</p>
+    <h1>¡Cambia a Telcel <span>sin perder tu número!</span></h1>
+    <p>Portabilidad 100% gratis • Mejores planes • Más gigas • Menos precio • En 24-72 horas tu línea activa</p>
     
-    <a href="https://wa.me/525512345678?text=Hola%20quiero%20portar%20mi%20número" class="btn" target="_blank">Portar por WhatsApp →</a>
-    <a href="#formulario" class="btn btn-outline">Quiero cotizar mi línea</a>
+    <a href="https://wa.me/525534844778?text=Hola%20quiero%20portar%20mi%20número%20y%20aprovechar%20la%20promo%20de%20$100" class="btn" target="_blank">Portar por WhatsApp →</a>
+    <a href="#formulario" class="btn btn-outline">Cotizar mi línea</a>
   </div>
 </section>
 
+<section class="promo-destacada">
+  <div class="container">
+    <h2>¡Oferta Exclusiva por Portabilidad!</h2>
+    <div class="precio">$100</div>
+    <p class="detalles">cada 45 días durante 12 meses</p>
+    <p class="detalles">
+      • Llamadas y mensajes ilimitados<br>
+      • 20 redes sociales ilimitadas (WhatsApp, Facebook, Instagram, TikTok y más)<br>
+      • 20 GB adicionales para navegar<br>
+    </p>
+    <p class="extra">¡TE REGALAMOS UNA TABLET SAMSUNG GALAXY TAB A!</p>
+    
+    <img src="https://m.media-amazon.com/images/I/61d46oYQgdL._AC_UF894,1000_QL80_.jpg" alt="Tablet Samsung Galaxy Tab A9+ en promoción Telcel" class="tablet">
+    
+    <a href="https://wa.me/525534844778?text=Hola%20quiero%20la%20promo%20de%20$100%20cada%2045%20días%20con%20tablet%20Samsung%20Galaxy%20Tab%20A" class="btn-promo" target="_blank">Aprovechar esta promo ahora →</a>
+  </div>
+</section>
+
+<!-- El resto de secciones se mantiene igual que antes (ventajas, operadores, formulario, footer) -->
+
 <section class="ventajas">
   <div class="container">
-    <h2>¿Por qué miles portan cada mes con nosotros?</h2>
-    
+    <h2>¿Por qué miles eligen portar a Telcel con nosotros?</h2>
     <div class="grid-3">
       <div class="card">
         <span class="emoji">0₱</span>
-        <h3>Completamente GRATIS</h3>
-        <p>Ni un peso por el trámite de portabilidad</p>
+        <h3>Trámite GRATIS</h3>
+        <p>Sin costo por la portabilidad</p>
       </div>
       <div class="card">
         <span class="emoji">⚡</span>
-        <h3>Muy rápido</h3>
-        <p>Telcel, AT&T y Movistar → 24-48 h<br>Otras → máximo 72 horas</p>
+        <h3>Rápido y fácil</h3>
+        <p>24-48 horas en la mayoría de los casos</p>
       </div>
       <div class="card">
         <span class="emoji">🎁</span>
-        <h3>Promociones exclusivas</h3>
-        <p>Paquetes que no aparecen en las páginas oficiales</p>
+        <h3>Promos exclusivas</h3>
+        <p>Incluyendo tablet Samsung y bonos extras</p>
       </div>
       <div class="card">
         <span class="emoji">🛡️</span>
-        <h3>100% seguro</h3>
-        <p>Nunca pedimos NIP ni contraseñas</p>
+        <h3>Seguro y confiable</h3>
+        <p>No pedimos NIP ni datos sensibles</p>
       </div>
       <div class="card">
         <span class="emoji">📱</span>
-        <h3>Todas las compañías</h3>
-        <p>Telcel • AT&T • Movistar • Unefon • Megacable • Bait • Weex • FreedomPop y más</p>
+        <h3>Telcel y más</h3>
+        <p>Porta a Telcel o cualquier otra compañía</p>
       </div>
       <div class="card">
         <span class="emoji">💬</span>
-        <h3>Asesoría por WhatsApp</h3>
-        <p>Respuesta en minutos — 9:00 a 21:00</p>
+        <h3>Asesoría WhatsApp</h3>
+        <p>Respuesta rápida — 9:00 a 21:00</p>
       </div>
     </div>
   </div>
@@ -265,9 +170,8 @@
 
 <section class="operadores">
   <div class="container">
-    <h2>Compañías a las que puedes portar</h2>
+    <h2>Compañías disponibles para portar</h2>
     <div class="logos">
-      <!-- Puedes reemplazar con imágenes reales -->
       <img src="https://via.placeholder.com/140x55/000/fff?text=Telcel" alt="Telcel">
       <img src="https://via.placeholder.com/140x55/000/fff?text=AT&T" alt="AT&T">
       <img src="https://via.placeholder.com/140x55/000/fff?text=Movistar" alt="Movistar">
@@ -280,9 +184,9 @@
 
 <section class="form-section" id="formulario">
   <div class="container">
-    <h2>¿Quieres saber cuánto puedes ahorrar?</h2>
+    <h2>¿Quieres verificar tu elegibilidad y ahorrar?</h2>
     <p style="font-size:1.3rem; margin:0 0 2.5rem; opacity:0.95;">
-      Déjanos tus datos y en minutos te enviamos las mejores opciones para tu número
+      Déjanos tus datos y te enviamos las mejores opciones Telcel en minutos
     </p>
     
     <div class="form-container">
@@ -304,7 +208,7 @@
 </section>
 
 <footer>
-  <p>Porta Fácil México © 2026 • Portabilidad autorizada por el IFT • No somos una compañía telefónica oficial, somos asesores independientes especializados en portabilidad.</p>
+  <p>Verificación de Beneficios de Telcel © 2026 • Portabilidad autorizada por el IFT • Somos asesores independientes especializados en portabilidad y beneficios Telcel. No somos Telcel oficial.</p>
 </footer>
 
 </body>
